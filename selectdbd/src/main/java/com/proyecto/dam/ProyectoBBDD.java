@@ -7,11 +7,13 @@ import java.sql.SQLException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties.Cache.Connection;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.proyecto.dam.repositories.ConexionBD;
 import com.proyecto.dam.repositories.CreateDB;
 
 @SpringBootApplication
+@EnableJpaRepositories(basePackages = "com.proyecto.dam.repositories")
 public class ProyectoBBDD {
 
     public static void main(String[] args) {

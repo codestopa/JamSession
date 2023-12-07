@@ -18,7 +18,7 @@ public class ConexionBD {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			java.sql.Connection conexion = DriverManager.getConnection(url, user, pass);
 			System.out.println("conexion establecida con: "+db);
-			conexion.close();
+			//conexion.close();
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
