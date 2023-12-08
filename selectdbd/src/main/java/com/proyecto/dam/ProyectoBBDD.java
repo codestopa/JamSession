@@ -20,7 +20,7 @@ public class ProyectoBBDD {
         SpringApplication.run(ProyectoBBDD.class, args);
         
     	ConexionBD.conexion();
-    	//CreateDB.createTable();
+    	//CreateDB.createDB();
     }
 }
 

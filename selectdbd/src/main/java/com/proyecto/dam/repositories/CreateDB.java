@@ -50,7 +50,7 @@ public class CreateDB {
     }
     
     
-    public static void createTable() {
+    public static void createDB() {
     	String db = "test";
 		String url = "jdbc:mysql://localhost:3306/" + db;
 		try {

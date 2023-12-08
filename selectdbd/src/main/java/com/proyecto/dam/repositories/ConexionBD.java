@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class ConexionBD {
 	public static void conexion() {
-		String db = "test";
+		String db = "jamsession";
 		String url = "jdbc:mysql://localhost:3306/" + db;
 		String user = "root";
 		String pass = "";
