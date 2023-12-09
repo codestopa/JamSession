@@ -6,7 +6,7 @@ import com.proyecto.dam.entities.usuario;
 
 public interface UsuarioRepository extends JpaRepository<usuario, Long> {
 	usuario findUsuarioById(Long id);
-	//prueba
+	//prueba2
 }
 
 
