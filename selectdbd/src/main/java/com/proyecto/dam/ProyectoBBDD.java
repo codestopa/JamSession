@@ -19,8 +19,8 @@ public class ProyectoBBDD {
     public static void main(String[] args) {
         SpringApplication.run(ProyectoBBDD.class, args);
         
-    	ConexionBD.conexion();
-    	//CreateDB.createDB();
+        ConexionBD.conexion();
+    	CreateDB.createDB();
     }
 }
 

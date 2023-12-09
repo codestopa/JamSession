@@ -1,6 +1,10 @@
 use test;
-create database JamSession;
+create database if not exists JamSession;
 use JamSession;
+
+drop table participa;
+drop table canciones;
+drop table usuario;
 
 CREATE TABLE IF NOT EXISTS usuario (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -12,7 +16,7 @@ CREATE TABLE IF NOT EXISTS canciones (
     nombre VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS usuario_instrumento_cancion (
+CREATE TABLE IF NOT EXISTS participa (
     id INT PRIMARY KEY,
     usuario_id INT,
     cancion_id INT,
@@ -22,7 +26,7 @@ CREATE TABLE IF NOT EXISTS usuario_instrumento_cancion (
 );
 
 INSERT INTO usuario (nombre) VALUES ('Carlos');
-INSERT INTO usuario (nombre) VALUES ('Helena');
+INSERT INTO usuario (nombre) VALUES ('El Pro');
 
 INSERT INTO canciones (nombre) VALUES ('Scar Tissue');
 INSERT INTO canciones (nombre) VALUES ('El Vampiro');

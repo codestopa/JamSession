@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.proyecto.dam.entities.Canciones;
 
 public interface CancionesRepository extends JpaRepository<Canciones, Long> {
-    // Métodos del repositorio
+	Canciones findCancionById(Long id);
 }
