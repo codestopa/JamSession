@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS canciones (
 );
 
 CREATE TABLE IF NOT EXISTS participa (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     usuario_id INT,
     cancion_id INT,
     instrumento VARCHAR(255) NOT NULL,
@@ -25,8 +25,8 @@ CREATE TABLE IF NOT EXISTS participa (
     FOREIGN KEY (cancion_id) REFERENCES canciones(id)
 );
 
-INSERT INTO usuario (nombre) VALUES ('Carlos');
-INSERT INTO usuario (nombre) VALUES ('El Pro');
+INSERT INTO usuario (nombre) VALUES ('Carlos prueba');
+INSERT INTO usuario (nombre) VALUES ('Helena prueba');
 
-INSERT INTO canciones (nombre) VALUES ('Scar Tissue');
+INSERT INTO canciones (nombre) VALUES ('Under The Bridge');
 INSERT INTO canciones (nombre) VALUES ('El Vampiro');

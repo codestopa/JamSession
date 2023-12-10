@@ -28,7 +28,6 @@ public class CreateDB {
                     statement.execute(query);
                 }
             }
-            System.out.println("Consultas ejecutadas exitosamente.");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -51,7 +50,7 @@ public class CreateDB {
     
     
     public static void createDB() {
-    	String db = "test";
+    	String db = "jamsession";
 		String url = "jdbc:mysql://localhost:3306/" + db;
 		try {
 			Connection conexion = DriverManager.getConnection(url, "root", "");
@@ -59,14 +58,27 @@ public class CreateDB {
 	    	String contenido = readSQLFile(rutasql);
 	    	executeQueries(conexion, contenido);
 			conexion.close();
+			System.out.println("Base de datos creada correctamente");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		
-    	
-    	
+		}	
+    }
+    
+    
+    public static void addUser(int usuarioid, int cancionid, String instrumento) {
+    	String db = "jamsession";
+		String url = "jdbc:mysql://localhost:3306/" + db;
+		String sql = "INSERT INTO participa (usuario_id, cancion_id, instrumento) VALUES ("+usuarioid+","+cancionid+",'"+instrumento+"')";
+		try {
+			Connection conexion = DriverManager.getConnection(url, "root", "");
+			Statement st = conexion.createStatement();
+	    	st.executeUpdate(sql);
+			conexion.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
     }
     
     

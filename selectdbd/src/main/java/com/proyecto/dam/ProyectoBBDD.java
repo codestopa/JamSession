@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.proyecto.dam.repositories.ConexionBD;
 import com.proyecto.dam.repositories.CreateDB;
+import com.proyecto.dam.repositories.Menu;
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "com.proyecto.dam.repositories")
@@ -21,6 +22,7 @@ public class ProyectoBBDD {
         
         ConexionBD.conexion();
     	CreateDB.createDB();
+    	Menu.menu();
     }
 }
 

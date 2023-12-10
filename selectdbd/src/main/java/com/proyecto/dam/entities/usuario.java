@@ -16,6 +16,7 @@ import jakarta.persistence.ManyToMany;
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 	    private String nombre;
+	    private String password;
 	   
 	    
 	    public usuario() {
@@ -53,5 +54,13 @@ import jakarta.persistence.ManyToMany;
 	                ", nombre='" + nombre + '\'' +
 	                '}';
 	    }
+
+		public String getPassword() {
+			return password;
+		}
+
+		public void setPassword(String password) {
+			this.password = password;
+		}
 
 	}
